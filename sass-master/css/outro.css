@@ -1,0 +1,73 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efefef;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header {
+  border-color: red;
+}
+header h1 {
+  color: red;
+}
+
+h1 {
+  color: red;
+}
+
+main {
+  border-top-width: 1px red;
+}
+
+footer {
+  clear: both;
+  border-color: red;
+  border-top: 1px solid red;
+  padding-top: 1rem;
+}
+footer h1 {
+  color: red;
+}
+
+span {
+  text-align: center;
+  width: 100%;
+  display: block;
+  color: red;
+}
+
+.left {
+  float: left;
+  width: 20%;
+  border-color: red;
+}
+.left h1 {
+  color: red;
+}
+.left ul {
+  list-style: none;
+  /* Remove default bullets */
+}
+.left ul li::before {
+  content: "•";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.right {
+  float: left;
+  width: 80%;
+  padding: 1rem;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: red;
+}
+
+/*# sourceMappingURL=outro.css.map */

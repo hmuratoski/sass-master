@@ -1,0 +1,67 @@
+
+$highlight-color:red;
+$highlight-background:red;
+
+@mixin theme($theme: red) {
+        border-color: $theme;
+
+        h1 {
+            color: $theme;
+    }
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #efefef;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    @include  theme;
+}
+
+h1 {
+    color: $highlight-color;
+}
+main {  
+    border-top-width: 1px $highlight-color;
+}
+footer {
+    clear: both;
+    @include theme;
+    border-top: 1px solid $highlight-color;
+    padding-top: 1rem;
+}
+span {
+        text-align: center;
+        width: 100%;
+        display: block;
+        color:$highlight-color;
+}
+
+.left {
+    float: left;
+    width: 20%;
+    @include theme;
+    ul {
+        list-style: none; /* Remove default bullets */
+        li::before {
+            content: "\2022";
+            color: $highlight-color;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            }
+      }
+}
+
+
+.right {
+    float: left;
+    width: 80%;
+    padding: 1rem;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: $highlight-color;
+}
